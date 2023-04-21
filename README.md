@@ -13,6 +13,10 @@ Chose project
 /tmp/gen711_project_data/FMT_3/fmt-tutorial-demux-1
 
 fastp.sh 150 /tmp/gen711_project_data/FMT_3/fmt-tutorial-demux-1 trimmed_fastqs
+   
+   cp /tmp/gen711_project_data//fastp-single.sh ~/fastp-signle.sh 
+   chmod +x ~/fastp-single.sh
+   ./fastp.sh 150 /tmp/gen711_project_data/FMT/fastqs trimmed_fastqs/
 
 waiting for joe to fix whatever he messed up so now we just write commands 
 
@@ -37,6 +41,6 @@ qiime tools import \
     --o-trimmed-sequences <path to an output directory>/<name for the output files>.qza
 
 qiime demux summarize \
---i-data <path to the file from step above> \
+--i-data </home/mxn1000/trimmed_fastqs> \
 --o-visualization  <path to an output directory>/<a name for the output files>.qzv 
 
